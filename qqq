@@ -1,0 +1,28 @@
+#Задаётся переманная "fin", присваивается дейстивие "открыть файл input.txt"
+fin= open("input.txt")
+#Задаётся переманная "fount", присваивается дейстивие "открыть файл output.txt, для записи"
+fount=open("output.txt","w")
+
+#Задаются переменные "a" и "b", присваиваются свойства выставляет формат целых чисел, проверка одной строки из переменной "fin", разделив все элементы и составив список, подсчитывая кол.элементов
+a,b = map(int, fin.readline().split())
+#Происходит запись в переменную в "fount" строку переменных a+b
+fount.write(str(a+b))
+
+#Закрывает переменную "fin"
+fin.close()
+#Закрывает переменную "fount"
+fount.close()
+
+from tkinter import *
+
+okno=Tk()
+txt = Entry(okno,width=25)
+txt.grid(column=0, row=0)
+xtx = Entry(okno,width=25)
+xtx.grid(column=0, row=1)
+p=Button(okno,width=21)
+p.grid(column=0, row=3)
+ttt = Entry(okno,width=25)
+ttt.grid(column=0, row=4)
+okno.geometry('170x90')
+okno.mainloop()
